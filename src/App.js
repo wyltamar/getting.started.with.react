@@ -21,11 +21,7 @@ class App extends Component {
         job: 'Bartender',
       },
     ];
-  }
-}
 
-class App extends Table {
-  render() {
     return (
       <div className="container">
         <Table characterData={characters} />
