@@ -1,35 +1,6 @@
 import React, { Component } from 'react';
 import Table from './Table';
 
-// class App extends Component {
-//   render() {
-//     const characters = [
-//       {
-//         name: 'Charlie',
-//         job: 'Janitor',
-//       },
-//       {
-//         name: 'Bac',
-//         job: 'Boucer',
-//       },
-//       {
-//         name: 'Dee',
-//         job: 'Aspring Actress',
-//       },
-//       {
-//         name: 'Denis',
-//         job: 'Bartender',
-//       },
-//     ];
-
-//     return (
-//       <div className="container">
-//         <Table characterData={characters} />
-//       </div>
-//     );
-//   }
-// }
-
 class App extends Component {
   state = {
     characters: [
@@ -51,6 +22,18 @@ class App extends Component {
       },
     ],
   };
+  render() {
+    const { characters } = this.state;
+
+    return (
+      <div className="container">
+        <Table
+          characterData={characters}
+          removeCharacter={this.removeCharacter}
+        />
+      </div>
+    );
+  }
 
   removeCharacter = (index) => {
     const { characters } = this.state;
@@ -61,14 +44,6 @@ class App extends Component {
       }),
     });
   };
-
-  render() {
-    const { characters } = this.state;
-
-    <div className="container">
-      <table characterData={characters} removeCharacter={this.removeCaracter} />
-    </div>;
-  }
 }
 
 export default App;

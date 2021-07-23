@@ -6,6 +6,7 @@ const TableHeader = () => {
       <tr>
         <th>Name</th>
         <th>Job</th>
+        <th>Action</th>
       </tr>
     </thead>
   );
@@ -31,7 +32,7 @@ const Table = (props) => {
   const { characterData, removeCharacter } = props;
 
   return (
-    <table>
+    <table class="pure-table pure-table-bordered">
       <TableHeader />
       <TableBody
         characterData={characterData}
