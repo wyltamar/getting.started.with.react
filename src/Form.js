@@ -25,7 +25,7 @@ class Form extends Component {
 
     return (
       <form class="pure-form pure-form-stacked">
-        <legend>Editing Form Fields</legend>
+        <legend>Add Users</legend>
         <label htmlFor="name">Name</label>
         <input
           type="text"
